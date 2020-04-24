@@ -1,0 +1,3 @@
+providers/digitalocean/Example-Infrastructure/
+*.tfstate
+*.tfstate.backup
