@@ -1,4 +1,4 @@
-## Picasso Infrastructure Terraform with DigitalOcean Provider
+## Monolithic Infrastructure Terraform with DigitalOcean Provider
 
 ![enter image description here](./monolith-infrastructure.jpg)
 
