@@ -23,6 +23,7 @@ resource "digitalocean_project" "project" {
     module.gitlab_runner_backend.gitlab_runner_backend_urn,
     module.monitoring.monitoring_urn,
     module.spaces.spaces_urn,
+    module.volume.volumes_urn,
     module.domain_module.domain_urn,
   ]
 }
@@ -113,6 +114,17 @@ module "spaces" {
   spaces_name = var.spaces_name
   spaces_region = var.do_sgp1
   spaces_allow_origin = var.spaces_allow_origin
+}
+
+## Create Volume with module
+module "volume" {
+  source = "./modules/volume_storage"
+  volume_name = var.volumes_name
+  volume_region = var.do_sgp1
+  volume_size = var.volumes_size
+  volume_filesystem = var.volumes_filesystem
+  volume_desc = var.volumes_desc
+  database_id = module.database.database_id
 }
 
 ## Setting Domain and subdomain in Digitalocean with modules

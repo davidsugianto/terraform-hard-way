@@ -72,6 +72,23 @@ variable "spaces_allow_origin" {
   default = "https://*.works.com"
 }
 
+# Volume
+variable "volumes_name" {
+  default = "worksvolume"
+}
+
+variable "volumes_size" {
+  default = 100
+}
+
+variable "volumes_filesystem" {
+  default = "ext4"
+}
+
+variable "volumes_desc" {
+  default = "works volume"
+}
+
 # Domain
 variable "acme_email" {
   default = "youremail@gmail.com"

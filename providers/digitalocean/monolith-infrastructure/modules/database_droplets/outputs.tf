@@ -9,3 +9,7 @@ output "database_private_ip" {
 output "database_urn" {
   value = digitalocean_droplet.database.urn
 }
+
+output "database_id" {
+  value = digitalocean_droplet.database.id
+}
