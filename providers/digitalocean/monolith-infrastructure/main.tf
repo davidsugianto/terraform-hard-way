@@ -131,12 +131,14 @@ module "volume" {
 module "domain_module" {
   source  = "./modules/loadbalancer_domain"
   loadbalancer_address = module.loadbalancer.loadbalancer_public_ip
-  frontend_address = module.frontend.frontend_public_ip
-  backend_staging_address = module.backend_staging.backend_staging_public_ip
-  backend_production_address = module.backend_production.backend_production_public_ip
   lets_domain_name = var.acme_domain_name
+  lets_domain_ttl = var.acme_domain_ttl
+  ## api
   lets_domain_api = var.acme_domain_api
   lets_domain_type_a = var.acme_domain_type_a
-  lets_domain_ttl = var.acme_domain_ttl
+  ## spaces
+  lets_domain_spaces = "spaces"
+  lets_domain_type_cname = "CNAME"
+  lets_domain_spaces_endpoint = module.spaces.bucket_name
 }
 

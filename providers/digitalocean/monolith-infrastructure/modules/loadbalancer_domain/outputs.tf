@@ -4,9 +4,9 @@ output "domain_urn" {
 output "primary_domain" {
   value = digitalocean_domain.domain.name
 }
-output "api_staging_domain" {
-  value = digitalocean_record.api_staging_domain.fqdn
+output "api_domain" {
+  value = digitalocean_record.api_domain.fqdn
 }
-output "api_production_domain" {
-  value = digitalocean_record.api_production_domain.fqdn
+output "spaces_domain" {
+  value = digitalocean_record.spaces_domain.fqdn
 }

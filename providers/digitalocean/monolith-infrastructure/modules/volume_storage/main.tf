@@ -7,7 +7,7 @@ resource "digitalocean_volume" "volumes" {
   description             = var.volume_desc
 }
 
-resource "digitalocean_volume_attachment" "foobar" {
+resource "digitalocean_volume_attachment" "attach_volume" {
   droplet_id = var.database_id
   volume_id  = digitalocean_volume.volumes.id
 }

@@ -60,11 +60,11 @@ output "monitoring_ip_private" {
 output "primary_url" {
   value = module.domain_module.primary_domain
 }
-output "api_staging_url" {
-  value = module.domain_module.api_staging_domain
+output "api_url" {
+  value = module.domain_module.api_domain
 }
-output "api_production_url" {
-  value = module.domain_module.api_production_domain
+output "spaces_url" {
+  value = module.domain_module.spaces_domain
 }
 
 ## SPACES
